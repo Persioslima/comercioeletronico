@@ -1,0 +1,26 @@
+info:
+  name: Atualizar Produto
+  type: http
+  seq: 13
+
+http:
+  method: PUT
+  url: http://localhost:8080/produtos/2
+  body:
+    type: json
+    data: |-
+      {
+        "nome": "Smartphone Galaxy",
+        "preco": 1999.90,
+        "categoriaId": 10,
+        "marcaId": 3,
+        "etiquetasIds": [1]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

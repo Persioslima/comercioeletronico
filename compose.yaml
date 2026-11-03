@@ -1,0 +1,16 @@
+name: comercioeletronico
+
+services:
+  postgres:
+    image: postgres:17
+    container_name: comercioeletronico-postgres
+    environment:
+      POSTGRES_DB: comercioeletronico
+      POSTGRES_USER: comercioeletronico
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "5434:5432"
+    volumes:
+      - comercioeletronico_dados:/var/lib/postgresql/data
+volumes:
+  comercioeletronico_dados:

@@ -1,0 +1,26 @@
+info:
+  name: Filtrar Produtos por Marca
+  type: http
+  seq: 23
+
+http:
+  method: GET
+  url: http://localhost:8080/produtos?marcaId=3&page=0&size=5
+  params:
+    - name: marcaId
+      value: "3"
+      type: query
+    - name: page
+      value: "0"
+      type: query
+    - name: size
+      value: "5"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
